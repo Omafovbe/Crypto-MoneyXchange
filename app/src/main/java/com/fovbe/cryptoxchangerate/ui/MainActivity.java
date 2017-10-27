@@ -52,7 +52,6 @@ import io.reactivex.schedulers.Schedulers;
 public class MainActivity extends AppCompatActivity implements CustomItemTouchHelper.CustomItemTouchHelperListener, AdapterView.OnItemSelectedListener{
 
     private ActivityMainBinding mBind;
-    private Crytocoin coin;
     private ArrayList<MoneyRates> rates = new ArrayList<>();
     public CurrencyAdapter mCurAdapter;
     public JSONObject currencyRateBTC;
@@ -178,7 +177,6 @@ public class MainActivity extends AppCompatActivity implements CustomItemTouchHe
             } catch (JSONException e) {
                 e.printStackTrace();
                 Log.e(TAG, "JSONException: " + e.getMessage());
-                Snackbar.make(mBind.coLay, e.getMessage(), Snackbar.LENGTH_LONG).show();
             }
 
             // With a for loop, iterate the newly added currency
@@ -222,19 +220,6 @@ public class MainActivity extends AppCompatActivity implements CustomItemTouchHe
 
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        // save the current state of the application screen
-        // on orientation change
-        if (mCurAdapter.getItemCount() != 0) {
-
-            outState.putParcelableArrayList(CURRENCY_CARDS_KEY, (ArrayList<MoneyRates>) mCurAdapter.getCurRates());
-        }
-        super.onSaveInstanceState(outState);
-
-    }
-
-
-    @Override
     public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction, int position) {
         if (viewHolder instanceof CurrencyAdapter.ViewHolder) {
             // get the removed item name to display it in snack bar
@@ -247,7 +232,6 @@ public class MainActivity extends AppCompatActivity implements CustomItemTouchHe
             // remove the item from recycler view and delete from shared Preferences
             sharedPref.removeUserCard(mContext, deletedItem);
             rates.remove(viewHolder.getAdapterPosition());
-
 
             // Update the recycler view
             mCurAdapter.updateList(rates);
@@ -399,6 +383,7 @@ public class MainActivity extends AppCompatActivity implements CustomItemTouchHe
                 });
     }
 
+    //Method to notify the user on the last time update was carried out.
     private void setUpdateTime(){
         Calendar c = Calendar.getInstance();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("E MMM dd, HH:mm:ss");
@@ -410,7 +395,6 @@ public class MainActivity extends AppCompatActivity implements CustomItemTouchHe
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.opt_menu, menu);
         return super.onCreateOptionsMenu(menu);
-        //return true;
     }
 
     @Override
@@ -427,18 +411,28 @@ public class MainActivity extends AppCompatActivity implements CustomItemTouchHe
 
                 break;
             case R.id.mnHelp:
-                //Displays how to use the app
+                //Displays features on how to use the app
                 alertMsgs.displayAlertDialog(R.string.helpTitle, R.string.helpMsg);
-                //Snackbar.make(mBind.coLay, "How to use app", Snackbar.LENGTH_LONG).show();
                 break;
             case R.id.mnAbout:
                 //Gives information about the developer
                 alertMsgs.displayAlertDialog(R.string.aboutTitle, R.string.aboutMsg);
-                //Snackbar.make(mBind.coLay,"About the app",Snackbar.LENGTH_LONG).show();
 
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        // save the current state of the application screen
+        // on orientation change
+        if (mCurAdapter.getItemCount() != 0) {
+
+            outState.putParcelableArrayList(CURRENCY_CARDS_KEY, (ArrayList<MoneyRates>) mCurAdapter.getCurRates());
+        }
+        super.onSaveInstanceState(outState);
+
     }
 
     @Override

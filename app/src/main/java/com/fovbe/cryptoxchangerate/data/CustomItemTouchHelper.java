@@ -7,7 +7,7 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
 
 /**
- * Created by OWNER1 on 10/18/2017.
+ * Created by Omafovbe Imonikosaye on 10/18/2017.
  */
 
 public class CustomItemTouchHelper extends ItemTouchHelper.Callback {

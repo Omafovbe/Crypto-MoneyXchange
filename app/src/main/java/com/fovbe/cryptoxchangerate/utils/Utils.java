@@ -11,7 +11,7 @@ import android.view.animation.AnimationUtils;
 import com.fovbe.cryptoxchangerate.R;
 
 /**
- * Created by OWNER1 on 10/26/2017.
+ * Created by Omafovbe Imonikosaye on 10/26/2017.
  */
 
 public class Utils extends ContextWrapper {
@@ -25,7 +25,7 @@ public class Utils extends ContextWrapper {
      * ===================
      * Method to check for users' connectivity; whether the device is online or not.
      *
-     * @return
+     * @return: returns boolean of network state
      */
 
     public boolean isConnectedOnline (){

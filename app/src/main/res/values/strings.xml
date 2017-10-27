@@ -7,7 +7,7 @@
     <string name="delete">Delete</string>
     <string name="baseInfo">BTC - %1$s = %2$.2f\nETH - %1$s = %3$.2f</string>
     <string name="update_msg">Update successful</string>
-    <string name="loading">Fetching info...</string>
+    <string name="loading">Fetching info&#8230;</string>
     <string name="last_update">Last update: %s</string>
 
     <!-- Menu -->
@@ -20,6 +20,5 @@
     <string name="aboutMsg">Intermediate Android Track challenge app developed by Omafovbe Imonikosaye.\n\nEmail: i.omafovbe@gmail.com\n\nGithub: https//github.com/omafovbe</string>
     <string name="helpTitle">Help</string>
     <string name="helpMsg">Swipe Left: To delete a currency card from list.\n\nMove Card: Hold card and move either up or down to change position.\n\nOn Conversion Screen: To convert between a currency and either Bitcoin or Ethereum click on the arrow-down-up image.\n\nThanks\n</string>
-
 
 </resources>

@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by OWNER1 on 10/17/2017.
+ * Created by Omafovbe Imonikosaye on 10/17/2017.
  */
 
 public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.ViewHolder> {
