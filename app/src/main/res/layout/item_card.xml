@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="java.text.NumberFormat" />
+
+        <import type="java.util.Locale"/>
+        <variable
+            name="curRates"
+            type="com.fovbe.cryptoxchangerate.data.model.MoneyRates"/>
+
+    </data>
+        <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/view_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_row_background">
+
+                <ImageView
+                    android:id="@+id/delete_icon"
+                    android:layout_width="@dimen/ic_delete"
+                    android:layout_height="@dimen/ic_delete"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/ten"
+                    android:src="@drawable/ic_delete" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_toLeftOf="@id/delete_icon"
+                    android:text="@string/delete"
+                    android:textColor="@android:color/white"
+                    android:textSize="13dp" />
+
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/view_foreground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cardbg"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="10dp"
+                app:loadImage="@{curRates.countryFlag}"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/con_flag"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{curRates.currency}"
+                android:id="@+id/curCode"
+                android:layout_marginTop="3dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_below="@id/con_flag"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{curRates.curName}"
+                android:textColor="@android:color/white"
+                android:id="@+id/cur_name"
+                android:textSize="16sp"
+                android:layout_below="@id/curCode"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btcText"
+                android:text="BTC"
+                android:textStyle="bold"
+                android:textColor="@color/bitcoin"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/curSym1"
+                android:textStyle="bold"
+                android:textColor="@color/bitcoin"
+                android:text="@{curRates.curSym}"
+                android:paddingEnd="2dp"
+                android:layout_below="@id/btcText"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/amtBtc"
+                android:textStyle="bold"
+                android:textColor="@color/bitcoin"
+                android:text="@{NumberFormat.getInstance(Locale.ENGLISH).format(curRates.rateBTC )}"
+                android:layout_toEndOf="@id/curSym1"
+                android:layout_below="@id/btcText"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ethText"
+                android:text="ETH"
+                android:textStyle="bold"
+                android:textColor="@color/ethereum"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+               />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/amtEth"
+                android:textStyle="bold"
+                android:textColor="@color/ethereum"
+                android:text="@{NumberFormat.getInstance(Locale.ENGLISH).format(curRates.rateETH)}"
+                android:layout_below="@id/ethText"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/curSym2"
+                android:textStyle="bold"
+                android:textColor="@color/ethereum"
+                android:text="@{curRates.curSym}"
+                android:paddingEnd="2dp"
+                android:layout_toLeftOf="@id/amtEth"
+                android:layout_below="@id/ethText"
+                android:layout_marginTop="10dp"
+                />
+
+        </RelativeLayout>
+</FrameLayout>
+
+</layout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8bc34a</color>
+    <color name="colorPrimaryDark">#689f38</color>
+    <color name="colorAccent">#4caf50</color>
+
+    <color name="ethereum">#cddc39</color>
+    <color name="bitcoin">#ffc107</color>
+    <color name="cardbg">#8d6e63</color>
+
+    <color name="bg_row_background">#fa315b</color>
+    <color name="light_gray">#cfd8dc</color>
+
+</resources>

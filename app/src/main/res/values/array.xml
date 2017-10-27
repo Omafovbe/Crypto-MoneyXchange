@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Currency Code Array -->
+    <string-array name="curCode">
+        <item>AUD</item>
+        <item>BRL</item>
+        <item>CAD</item>
+        <item>CNY</item>
+        <item>EUR</item>
+        <item>GBP</item>
+        <item>HKD</item>
+        <item>INR</item>
+        <item>ILS</item>
+        <item>JPY</item>
+        <item>MYR</item>
+        <item>MXN</item>
+        <item>NGN</item>
+        <item>NOK</item>
+        <item>PKR</item>
+        <item>RUB</item>
+        <item>SGD</item>
+        <item>ZAR</item>
+        <item>SEK</item>
+        <item>CHF</item>
+        <item>THB</item>
+        <item>TRY</item>
+        <item>USD</item>
+    </string-array>
+
+    <!-- Currency Name Array -->
+    <string-array name="currency">
+        <item>Select Currency</item>
+        <item>Australian Dollar</item>
+        <item>Brazilian Real</item>
+        <item>Canadian Dollar</item>
+        <item>Chinese Yuan Renminbi</item>
+        <item>European Euro</item>
+        <item>Great British Pound</item>
+        <item>Hong Kong Dollar</item>
+        <item>Indian Rupee</item>
+        <item>Israeli New Sheqel</item>
+        <item>Japanese Yen</item>
+        <item>Malaysian Ringgit</item>
+        <item>Mexican Peso</item>
+        <item>Nigerian Naira</item>
+        <item>Norwegian Krone</item>
+        <item>Pakistan Rupee</item>
+        <item>Russian Ruble</item>
+        <item>Singapore Dollar</item>
+        <item>South African Rand</item>
+        <item>Swedish Krona</item>
+        <item>Swiss Franc</item>
+        <item>Thai Baht</item>
+        <item>Turkish Lira</item>
+        <item>United States Dollar</item>
+    </string-array>
+
+    <!-- Currency Symbol Array -->
+    <string-array name="curSymbol">
+        <item>AU$</item>
+        <item>R$</item>
+        <item>CA$</item>
+        <item>CN¥</item>
+        <item>€</item>
+        <item>£</item>
+        <item>HK$</item>
+        <item>₨</item>
+        <item>₪</item>
+        <item>JP¥</item>
+        <item>RM</item>
+        <item>Mex$</item>
+        <item>₦</item>
+        <item>øre</item>
+        <item>PKRs</item>
+        <item>RUруб</item>
+        <item>S$</item>
+        <item>R</item>
+        <item>kr</item>
+        <item>CHF</item>
+        <item>฿</item>
+        <item>YTL</item>
+        <item>$</item>
+    </string-array>
+</resources>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Crypto-Money Rates</string>
+    <string name="intro_msg">Crypto-Money Converter</string>
+    <string name="convert">%1s Conversion</string>
+    <string name="amount_hint">Amount</string>
+    <string name="defaultAmount">1</string>
+    <string name="delete">Delete</string>
+    <string name="baseInfo">BTC - %1$s = %2$.2f\nETH - %1$s = %3$.2f</string>
+    <string name="update_msg">Update successful</string>
+    <string name="loading">Fetching info...</string>
+    <string name="last_update">Last update: %s</string>
+
+    <!-- Menu -->
+    <string name="menuUpdate">Update</string>
+    <string name="menuHelp">Help</string>
+    <string name="menuAbout">About</string>
+
+    <!-- AlertDialog -->
+    <string name="aboutTitle">About</string>
+    <string name="aboutMsg">Intermediate Android Track challenge app developed by Omafovbe Imonikosaye.\n\nEmail: i.omafovbe@gmail.com\n\nGithub: https//github.com/omafovbe</string>
+    <string name="helpTitle">Help</string>
+    <string name="helpMsg">Swipe Left: To delete a currency card from list.\n\nMove Card: Hold card and move either up or down to change position.\n\nOn Conversion Screen: To convert between a currency and either Bitcoin or Ethereum click on the arrow-down-up image.\n\nThanks\n</string>
+
+
+</resources>
