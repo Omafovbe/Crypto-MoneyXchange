@@ -151,6 +151,7 @@
 
         <!-- Ethereum -->
         <ImageView
+            android:contentDescription="@string/ethereumimage"
             android:id="@+id/eth_icon"
             android:layout_width="@dimen/flag_sm"
             android:layout_height="@dimen/flag_sm"
