@@ -18,7 +18,7 @@
         android:focusableInTouchMode="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="16dp">
+        android:layout_margin="@dimen/sixDim">
 
         <!--Base Information -->
         <TextView
@@ -48,14 +48,14 @@
             android:layout_below="@id/baseInfo"
             android:textAppearance="?android:textAppearanceLarge"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/countryFlag"
+            android:layout_toEndOf="@id/countryFlag"
             android:text="@{currency.currency}"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:id="@+id/currencyName"
             android:layout_below="@id/currencyCode"
-            android:layout_toRightOf="@id/countryFlag"
+            android:layout_toEndOf="@id/countryFlag"
             android:textStyle="bold"
             android:layout_marginBottom="@dimen/twenty"
             android:textAppearance="?android:textAppearanceMedium"
@@ -70,7 +70,7 @@
             android:layout_marginStart="@dimen/five"
             android:layout_below="@id/baseInfo"
             android:layout_alignParentEnd="true"
-            android:layout_toRightOf="@id/currencyName"
+            android:layout_toEndOf="@id/currencyName"
             android:hint="@string/amount_hint">
 
             <EditText
@@ -108,19 +108,19 @@
             android:textAppearance="?android:textAppearanceLarge"
             android:layout_height="wrap_content"
             android:layout_below="@id/divider"
-            android:layout_toRightOf="@id/btc_icon"
-            android:text="BTC"/>
+            android:layout_toEndOf="@id/btc_icon"
+            android:text="@string/btc"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:id="@+id/btcName"
             android:layout_below="@id/btc_code"
-            android:layout_toRightOf="@id/btc_icon"
+            android:layout_toEndOf="@id/btc_icon"
             android:textStyle="bold"
             android:layout_marginBottom="@dimen/twenty"
             android:textAppearance="?android:textAppearanceMedium"
             android:layout_height="wrap_content"
-            android:text="Bitcoin"/>
+            android:text="@string/bitcoin"/>
 
         <android.support.design.widget.TextInputLayout
 
@@ -129,7 +129,7 @@
             android:layout_marginStart="@dimen/five"
             android:layout_alignParentEnd="true"
             android:layout_below="@id/divider"
-            android:layout_toRightOf="@id/btcName">
+            android:layout_toEndOf="@id/btcName">
 
             <EditText
                 android:layout_width="match_parent"
@@ -166,19 +166,19 @@
             android:layout_below="@id/divider1"
             android:textAppearance="?android:textAppearanceLarge"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/eth_icon"
-            android:text="ETH"/>
+            android:layout_toEndOf="@id/eth_icon"
+            android:text="@string/eth"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:id="@+id/ethName"
             android:layout_below="@id/eth_code"
-            android:layout_toRightOf="@id/eth_icon"
+            android:layout_toEndOf="@id/eth_icon"
             android:textStyle="bold"
             android:textAllCaps="false"
             android:textAppearance="?android:textAppearanceMedium"
             android:layout_height="wrap_content"
-            android:text="Ethereum"/>
+            android:text="@string/ethereum"/>
 
         <android.support.design.widget.TextInputLayout
 
@@ -188,7 +188,7 @@
 
             android:layout_alignParentEnd="true"
             android:layout_below="@id/divider1"
-            android:layout_toRightOf="@id/ethName">
+            android:layout_toEndOf="@id/ethName">
 
             <EditText
                 android:layout_width="match_parent"

@@ -27,20 +27,20 @@
                     android:id="@+id/delete_icon"
                     android:layout_width="@dimen/ic_delete"
                     android:layout_height="@dimen/ic_delete"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="@dimen/ten"
+                    android:layout_marginEnd="@dimen/ten"
                     android:src="@drawable/ic_delete" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="@dimen/ten"
-                    android:layout_toLeftOf="@id/delete_icon"
+                    android:layout_marginEnd="@dimen/ten"
+                    android:layout_toStartOf="@id/delete_icon"
                     android:text="@string/delete"
                     android:textColor="@android:color/white"
-                    android:textSize="13dp" />
+                    android:textSize="@dimen/deleteText" />
 
             </RelativeLayout>
 
@@ -49,12 +49,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/cardbg"
-            android:padding="10dp">
+            android:padding="@dimen/ten">
 
             <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginEnd="10dp"
+                android:layout_width="@dimen/flag_big"
+                android:layout_height="@dimen/flag_big"
+                android:layout_marginEnd="@dimen/ten"
                 app:loadImage="@{curRates.countryFlag}"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/con_flag"/>
@@ -64,9 +64,9 @@
                 android:layout_height="wrap_content"
                 android:text="@{curRates.currency}"
                 android:id="@+id/curCode"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="@dimen/three"
                 android:layout_centerHorizontal="true"
-                android:textSize="20dp"
+                android:textSize="@dimen/txtTwenty"
                 android:textStyle="bold"
                 android:textColor="@android:color/white"
                 android:layout_below="@id/con_flag"
@@ -77,7 +77,7 @@
                 android:text="@{curRates.curName}"
                 android:textColor="@android:color/white"
                 android:id="@+id/cur_name"
-                android:textSize="16sp"
+                android:textSize="@dimen/sixTxt"
                 android:layout_below="@id/curCode"
                 android:layout_centerHorizontal="true"
                 />
@@ -86,11 +86,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btcText"
-                android:text="BTC"
+                android:text="@string/btc"
                 android:textStyle="bold"
                 android:textColor="@color/bitcoin"
                 android:gravity="center_horizontal"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="@dimen/fifteen"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -99,9 +99,9 @@
                 android:textStyle="bold"
                 android:textColor="@color/bitcoin"
                 android:text="@{curRates.curSym}"
-                android:paddingEnd="2dp"
+                android:paddingEnd="@dimen/two"
                 android:layout_below="@id/btcText"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/ten"
                 />
 
             <TextView
@@ -110,21 +110,21 @@
                 android:id="@+id/amtBtc"
                 android:textStyle="bold"
                 android:textColor="@color/bitcoin"
-                android:text="@{NumberFormat.getInstance(Locale.ENGLISH).format(curRates.rateBTC )}"
+                android:text="@{NumberFormat.getInstance(Locale.ENGLISH).format(safeUnbox(curRates.rateBTC ))}"
                 android:layout_toEndOf="@id/curSym1"
                 android:layout_below="@id/btcText"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/ten"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/ethText"
-                android:text="ETH"
+                android:text="@string/eth"
                 android:textStyle="bold"
                 android:textColor="@color/ethereum"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="@dimen/fifteen"
                />
 
             <TextView
@@ -133,10 +133,10 @@
                 android:id="@+id/amtEth"
                 android:textStyle="bold"
                 android:textColor="@color/ethereum"
-                android:text="@{NumberFormat.getInstance(Locale.ENGLISH).format(curRates.rateETH)}"
+                android:text="@{NumberFormat.getInstance(Locale.ENGLISH).format(safeUnbox(curRates.rateETH))}"
                 android:layout_below="@id/ethText"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/ten"
                 />
 
             <TextView
@@ -146,10 +146,10 @@
                 android:textStyle="bold"
                 android:textColor="@color/ethereum"
                 android:text="@{curRates.curSym}"
-                android:paddingEnd="2dp"
-                android:layout_toLeftOf="@id/amtEth"
+                android:paddingEnd="@dimen/two"
+                android:layout_toStartOf="@id/amtEth"
                 android:layout_below="@id/ethText"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/ten"
                 />
 
         </RelativeLayout>
