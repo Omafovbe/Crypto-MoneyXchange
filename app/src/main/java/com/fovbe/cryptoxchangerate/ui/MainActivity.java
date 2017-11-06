@@ -120,16 +120,16 @@ public class MainActivity extends AppCompatActivity implements CustomItemTouchHe
         curCode = getResources().getStringArray(R.array.curCode);
 
         //Initializing the recyclerVIew
-        mBind.cardRV.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        mBind.cardRV.setLayoutManager(new LinearLayoutManager(mContext,LinearLayoutManager.VERTICAL,false));
         mBind.cardRV.setHasFixedSize(true);
         mCurAdapter = new CurrencyAdapter(rates);
         mBind.cardRV.setItemAnimator(new DefaultItemAnimator());
         mBind.cardRV.setAdapter(mCurAdapter);
-        mBind.cardRV.addItemDecoration(new DividerItemDecoration(MainActivity.this, DividerItemDecoration.VERTICAL));
+        mBind.cardRV.addItemDecoration(new DividerItemDecoration(mContext, DividerItemDecoration.VERTICAL));
 
-        //Initializing the spiller with values using the ArrayAdapter
+        //Initializing the spinner with values using the ArrayAdapter
         mBind.curSelect.setOnItemSelectedListener(this);
-        ArrayAdapter<String> adapter =  new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, currencyNames );
+        ArrayAdapter<String> adapter =  new ArrayAdapter<>(mContext, android.R.layout.simple_dropdown_item_1line, currencyNames );
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mBind.curSelect.setAdapter(adapter);
         mBind.curSelect.setEnabled(false); //Disable the spinner

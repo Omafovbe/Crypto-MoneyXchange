@@ -99,6 +99,7 @@ public class Convert extends AppCompatActivity implements KeyEvent.Callback {
 
         }
 
+        //Determine which to calculate for either BTC, ETH or Currency
         private void calculateBaseSwitch(){
             baseRateSwitch += 1;
             if (baseRateSwitch >2) {
@@ -125,27 +126,30 @@ public class Convert extends AppCompatActivity implements KeyEvent.Callback {
 
         switch (currencySwitch){
             case 0:
+                //Calculate the rates for both BTC and ETH
                 String  tvCur = convertActivityBind.curAmount.getText().toString();
-                if (tvCur != null && !tvCur.isEmpty()) {
+                if (!tvCur.isEmpty()) {
                     calculate = Double.parseDouble(tvCur);
-                    calculate *= default_btc;
+                    calculate /= default_btc;
                     convertActivityBind.btcAmount.setText(decFormat.format(calculate));
-                    convertActivityBind.ethAmount.setText(decFormat.format((default_eth*Double.parseDouble(tvCur.toString()))));
+                    convertActivityBind.ethAmount.setText(decFormat.format((Double.parseDouble(tvCur))/default_eth));
                 }
                 break;
             case 1:
+                //Calculate the rate between BTC and the Currency
                 String  tvBTC = convertActivityBind.btcAmount.getText().toString();
-                if (tvBTC != null && !tvBTC.isEmpty()) {
+                if (!tvBTC.isEmpty()) {
                     calculate = Double.parseDouble(tvBTC);
-                    calculate = default_btc/calculate;
+                    calculate *= default_btc;
                     convertActivityBind.curAmount.setText(decFormat.format(calculate));
                 }
                 break;
             case 2:
+                //Calculate the rate between ETH and the currency
                 String  tvETH = convertActivityBind.ethAmount.getText().toString();
-                if (tvETH != null && !tvETH.isEmpty()) {
+                if (!tvETH.isEmpty()) {
                     calculate = Double.parseDouble(tvETH);
-                    calculate = default_eth/calculate;
+                    calculate *= default_eth;
                     convertActivityBind.curAmount.setText(decFormat.format(calculate));
                 }
                 break;
@@ -158,11 +162,12 @@ public class Convert extends AppCompatActivity implements KeyEvent.Callback {
      * Disabling or Enabling the various EditText field according
      * to whatever currency is being calculated
      *
-     * @param setEnable
+     * @param setEnable: boolean
      */
     private void editTextStatus (boolean setEnable){
 
         convertActivityBind.curAmount.setEnabled(setEnable);
+        convertActivityBind.curAmount.setText("");
         convertActivityBind.btcAmount.setEnabled(!setEnable);
         //convertActivityBind.ethAmount.setEnabled(setEnable);
         if (baseRateSwitch==2){
