@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CryptoXchangeRate.iml" filepath="$PROJECT_DIR$/CryptoXchangeRate.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Crypto-MoneyXchange.iml" filepath="$PROJECT_DIR$/.idea/Crypto-MoneyXchange.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Crypto-MoneyXchange.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Crypto-MoneyXchange.app.iml" />
     </modules>
   </component>
 </project>
